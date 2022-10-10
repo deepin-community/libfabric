@@ -1,0 +1,35 @@
+From: Roland Fehrenbacher <rf@q-leap.de>
+Date: Tue, 1 Sep 2020 10:28:10 +0000
+Subject: Fix manpages NAME sections
+
+---
+ man/man3/fi_collective.3 | 2 ++
+ man/man7/fi_rstream.7    | 2 +-
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/man/man3/fi_collective.3 b/man/man3/fi_collective.3
+index 3d000b0..0fccefa 100644
+--- a/man/man3/fi_collective.3
++++ b/man/man3/fi_collective.3
+@@ -3,6 +3,8 @@
+ .TH "fi_collective" "3" "2020\-04\-13" "Libfabric Programmer\[aq]s Manual" "\@VERSION\@"
+ .hy
+ .SH NAME
++.PP
++fi_collective \- Collective operations
+ .TP
+ .B fi_join_collective
+ Operation where a subset of peers join a new collective group.
+diff --git a/man/man7/fi_rstream.7 b/man/man7/fi_rstream.7
+index ac3f94c..0b0a475 100644
+--- a/man/man7/fi_rstream.7
++++ b/man/man7/fi_rstream.7
+@@ -4,7 +4,7 @@
+ .hy
+ .SH NAME
+ .PP
+-fi_rstream
++fi_rstream \- The Rstream Fabric Provider
+ .SH OVERVIEW
+ .PP
+ The rstream provider supports stream messaging over message based RMA.

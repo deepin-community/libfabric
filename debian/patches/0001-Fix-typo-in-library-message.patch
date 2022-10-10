@@ -1,0 +1,21 @@
+From: Roland Fehrenbacher <rf@q-leap.de>
+Date: Tue, 1 Sep 2020 09:12:54 +0000
+Subject: Fix typo in library message
+
+---
+ prov/psm2/src/psmx2_av.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/prov/psm2/src/psmx2_av.c b/prov/psm2/src/psmx2_av.c
+index d21040d..254c410 100644
+--- a/prov/psm2/src/psmx2_av.c
++++ b/prov/psm2/src/psmx2_av.c
+@@ -228,7 +228,7 @@ void psmx2_epid_to_epaddr(struct psmx2_trx_ctxt *trx_ctxt,
+ 
+ 	/* call fi_log() directly to always generate the output */
+ 	fi_log(&psmx2_prov, FI_LOG_WARN, FI_LOG_AV, __func__, __LINE__,
+-		"psm2_ep_connect retured error %s, remote epid=%lx."
++		"psm2_ep_connect returned error %s, remote epid=%lx."
+ 		"If it is a timeout error, try setting FI_PSM2_CONN_TIMEOUT "
+ 		"to a larger value (current: %d seconds).\n",
+ 		psm2_error_get_string(err), epid, psmx2_env.conn_timeout);

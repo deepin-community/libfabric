@@ -1,0 +1,159 @@
+libfabric (1.11.0-2) unstable; urgency=medium
+
+  * Enable build on ppc64el
+
+ -- Roland Fehrenbacher <rfehren@debian.org>  Wed, 23 Sep 2020 09:15:08 +0000
+
+libfabric (1.11.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * Remove obsolete patches
+
+ -- Roland Fehrenbacher <rfehren@debian.org>  Tue, 01 Sep 2020 09:40:03 +0000
+
+libfabric (1.6.2-3) unstable; urgency=medium
+
+  * Add patch to detect the presence of OmniPath adapters in the psm2
+    provider. Amongst others things, this avoids 'illegal instruction' crashes
+    on older hardware that doesn't support AVX2.
+
+ -- Roland Fehrenbacher <rfehren@debian.org>  Sat, 02 Feb 2019 10:42:42 +0000
+
+libfabric (1.6.2-2) unstable; urgency=medium
+
+  * New upstream release
+  * Document psm2 support in README.Debian (Closes: #906297)
+
+ -- Roland Fehrenbacher <rfehren@debian.org>  Wed, 16 Jan 2019 11:35:13 +0000
+
+libfabric (1.6.1-5) unstable; urgency=medium
+
+  * Update Breaks+Replaces on libfabric1, libfabric-dev
+
+ -- Roland Fehrenbacher <rf@q-leap.de>  Tue, 19 Jun 2018 09:47:34 +0000
+
+libfabric (1.6.1-4) unstable; urgency=medium
+
+  * Move all man pages to libfabric-dev (Closes: #891395)
+
+ -- Roland Fehrenbacher <rfehren@debian.org>  Tue, 19 Jun 2018 08:07:35 +0000
+
+libfabric (1.6.1-3) unstable; urgency=medium
+
+  * libfabric-bin must Breaks+Replaces libfabric1 (<< 1.6) (Closes: #901191)
+
+ -- Mehdi Dogguy <mehdi@debian.org>  Sun, 10 Jun 2018 11:12:48 +0200
+
+libfabric (1.6.1-2) unstable; urgency=medium
+
+  * libpsm2 is supported on amd64 only. Restrict build-depedency on
+    libpsm2-dev accordingly.
+  * Fix Vcs-Git field (spotted by lintian's vcs-field-not-canonical tag)
+  * Fix some typos in library messages
+    - add patch debian/patches/0002-Fix-typos-in-library-messages.patch
+  * Bump Standards-Version to 4.1.4, no changes required.
+
+ -- Mehdi Dogguy <mehdi@debian.org>  Sat, 09 Jun 2018 11:01:42 +0200
+
+libfabric (1.6.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Add package libfabric-bin
+  * Add psm2 provider
+  * Drop obsolete patches
+
+ -- Roland Fehrenbacher <rfehren@debian.org>  Wed, 30 May 2018 10:37:32 +0200
+
+libfabric (1.5.3-1) unstable; urgency=medium
+
+  [ Roland Fehrenbacher ]
+  * New upstream release.
+  * Update Maintainer field with "Debian HPC Team"
+  * Move packaging Git repo to salsa.d.o and update Vcs-{Git,Browser}
+    accordingly.
+  * Add myself to Uploaders
+  * Re-establish dep14 repository/package structure. Please read the following
+    files before contributing to this package:
+    - debian/README.source
+    - debian/gbp.conf
+
+  [ Mehdi Dogguy ]
+  * Updated repo location of fabtests in README.Debian
+  * Remove Ana Beatriz Guerrero Lopez from Uploaders and add myself.
+    Thanks Ana for all your work!
+
+ -- Mehdi Dogguy <mehdi@debian.org>  Thu, 04 Jan 2018 14:21:40 +0100
+
+libfabric (1.5.2-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release (Closes: #881814)
+  * Point watch file to release tarballs on GitHub
+  * Add new symbols for libfabric1 library
+  * Bump Standards-Version to 4.1.1 (no changes needed)
+  * Add patch to fix spelling errors
+  * Add patches to fix bad whatis entries and manpage errors from man
+  * Correct order of file paragraphs in copyright file and update copyright
+  * Update to debhelper 10
+  * Switch to dbgsym debug package
+  * Explicitly enable/disable libfabric providers
+  * Add static libfabric library to libfabric-dev
+  * Relax supported architectures to linux-any
+
+ -- Benjamin Drung <bdrung@debian.org>  Wed, 29 Nov 2017 16:58:45 +0100
+
+libfabric (1.4.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update README.Debian.
+  * Remove patch fix_typo, it's been merged upstream.
+  * Update installed docs.
+  * Install user command manpages (man1) in libfabric1.
+
+ -- Ana Beatriz Guerrero Lopez <ana@debian.org>  Thu, 03 Nov 2016 00:45:42 +0100
+
+libfabric (1.3.0-4) unstable; urgency=medium
+
+  * Fix Vcs-fields to point to the correct repository.
+  * Move libfabric.pc to -dev package. Add required Break/Replaces.
+
+ -- Ana Beatriz Guerrero Lopez <ana@debian.org>  Fri, 21 Oct 2016 16:07:30 +0200
+
+libfabric (1.3.0-3) unstable; urgency=medium
+
+  * Update watch file. Upstream uses github only now.
+  * Install libfabric.pc. Thanks Marcin Ślusarz. (Closes: #826222)
+  * Point Vcs-* fields to HTTPS URLs
+  * Enable hardening.
+  * Add patch with a few typo fixes.
+
+ -- Ana Beatriz Guerrero Lopez <ana@debian.org>  Mon, 05 Sep 2016 22:21:26 +0200
+
+libfabric (1.3.0-2) unstable; urgency=medium
+
+  * Include the complete text for the expat license in the debian/copyright.
+    Thanks to Thorsten Alteholz.
+
+ -- Ana Beatriz Guerrero Lopez <ana@debian.org>  Sat, 14 May 2016 17:40:46 +0200
+
+libfabric (1.3.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update Standards-Version to 3.9.8, no changes required.
+  * Switch Vcs-Browser to https.
+  * Add myself to Uploaders.
+  * Update debian/copyright.
+
+ -- Ana Beatriz Guerrero Lopez <ana@debian.org>  Fri, 06 May 2016 16:06:11 +0200
+
+libfabric (1.2.0-2) unstable; urgency=medium
+
+  * Completed copyright with all contributors
+
+ -- Roland Fehrenbacher <rf@q-leap.de>  Thu, 04 Feb 2016 18:15:51 +0000
+
+libfabric (1.2.0-1) unstable; urgency=medium
+
+  * Initial release. (Closes: 812808)
+
+ -- Roland Fehrenbacher <rf@q-leap.de>  Wed, 27 Jan 2016 15:43:23 +0100
